@@ -9,7 +9,18 @@ public class MyAVLTree<T> {
      * Implement the following method.
      */
     public int depthOfMin() {
-    	throw new UnsupportedOperationException("Delete this line and replace it with your implementation");
+        if (this.root == null) {
+            return -1;
+        }
+        else {
+            TreeNode minNode = root;
+            int depth = 0;
+            while (minNode.getLeft() != null) {
+                depth = depth + 1;
+                minNode = minNode.getLeft();
+            }
+            return depth;
+        }
     }
     
     

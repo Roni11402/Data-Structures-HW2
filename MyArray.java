@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class MyArray<T> {
 	private ArrayElement<T>[] array;
     private int size;
@@ -16,7 +18,12 @@ public class MyArray<T> {
      * Implement the following method.
      */
     public void reverse() {
-    	throw new UnsupportedOperationException("Delete this line and replace it with your implementation");
+        ArrayElement temp;
+        for (int i = size - 1, j = 0; i > j; i--, j++) {
+            temp = array[j];
+            array[j] = array[i];
+            array[i] = temp;
+        }
     }
 
     /***
