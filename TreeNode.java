@@ -16,12 +16,16 @@ public class TreeNode<T> extends Element<T> {
 	private TreeNode<T> right;
 	private TreeNode<T> p;		//parent
 	private int height;
+    private TreeNode prev;
+    private TreeNode next;
 
 	public TreeNode(int key, T satelliteData) {
 		super(key, satelliteData);
 		this.left = null;
 		this.right = null;
 		this.height = 0;
+        this.prev = null;
+        this.next = null;
 	}
 	
 	public TreeNode(int key) {
@@ -63,5 +67,13 @@ public class TreeNode<T> extends Element<T> {
 	public void setHeight(int height) {
 		this.height = height;
 	}
+
+    public TreeNode getPrev() {return this.prev;}
+
+    public TreeNode getNext() {return this.next;}
+
+    public void setPrev(TreeNode<T> prev) {this.prev = prev;}
+
+    public void setNext(TreeNode<T> next) {this.next = next;}
 
 }
