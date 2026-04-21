@@ -47,8 +47,7 @@ public class MyFirstDataStructure<T> {
             }
             if (foundKey.getNext() != null) {
                 foundKey.getNext().setPrev(foundKey.getPrev());
-            }
-            else {
+            } else {
                 this.last = foundKey.getPrev();
             }
             tree.delete(foundKey);
@@ -59,8 +58,7 @@ public class MyFirstDataStructure<T> {
                         currNode = currNode.getRight();
                     }
                     this.maximum = currNode;
-                }
-                else {
+                } else {
                     this.maximum = null;
                 }
             }

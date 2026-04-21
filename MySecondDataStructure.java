@@ -94,12 +94,11 @@ public class MySecondDataStructure {
 
     public Product mostExpensive() {
         Product max = null;
-        for (int i = 0; i < 6; i++){
-            if (mostExpensive[i] != null){
+        for (int i = 0; i < 6; i++) {
+            if (mostExpensive[i] != null) {
                 if (max == null) {
                     max = mostExpensive[i];
-                }
-                else if(mostExpensive[i].price() + priceRaise[i] > max.price() + priceRaise[max.quality()]) {
+                } else if (mostExpensive[i].price() + priceRaise[i] > max.price() + priceRaise[max.quality()]) {
                     max = mostExpensive[i];
                 }
             }
